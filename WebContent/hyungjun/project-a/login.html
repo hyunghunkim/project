@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+
+
+	<footer id="footer">
+		<div class="inner">
+
+			<h3>SpringWorld</h3>
+
+			<form action="#" method="post">
+
+				<div class="field half first">
+					<label for="id">Id</label> <input name="id" id="id" type="text"
+						placeholder="Id">
+				</div>
+				<div class="field half">
+					<label for="password">Password</label> <input name="password"
+						id="password" type="text" placeholder="Password">
+				</div>
+				<ul class="actions">
+					<li><input value="로그인" class="button alt" type="button"
+						onclick="loginbutton()"></li>
+				</ul>
+			</form>
+
+			<div class="copyright">
+				&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>.
+				Images: <a href="https://unsplash.com">Unsplash</a>.
+			</div>
+
+		</div>
+		
+	</footer>
+	<script type="text/javascript">
+		function loginbutton() {
+			if (document.getElementById("id").value == "kim"
+					&& document.getElementById("password").value == "1234") {
+				location.href = "http://localhost:8080/Web/project-a/index.html?wher=id="+document.getElementById("id").value;          
+			}
+		}
+		
+		
+	</script>
+	
+</body>
+
+</html>
