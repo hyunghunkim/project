@@ -29,8 +29,8 @@
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">
-					<header>
-						<h1>Welcome to Projection</h1>
+					<header class="header">
+						<h1 id="header-h1"name="header-h1">Welcome to Projection</h1>
 					</header>
 
 					<div class="flex ">
@@ -56,11 +56,17 @@
 					</div>
 
 					<footer>
-						<a href="#" class="button">Get Started</a>
+						<input name="logbutton"type="button"value="로그인"id="logbutton"onclick="
+						if(this.value === '로그인'){
+							login()
+						}else{
+							logout()
+						}
+						">
 					</footer>
 				</div>
 			</section>
-
+			
 
 		<!-- Three -->
 			<section id="three" class="wrapper align-center">
@@ -127,6 +133,17 @@
 			</footer>
 
 		<!-- Scripts -->
+			<script type="text/javascript">
+				function login() {
+					document.getElementById("logbutton").value='로그아웃';
+					location.href = "http://localhost:8080/Web/project-a/login.html";
+				}
+				function logout() {
+					location.href = "http://localhost:8080/Web/project-a/index.html";
+					document.getElementById("logbutton").value="로그인";
+				}
+			</script>
+			<script src="login.html"></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
