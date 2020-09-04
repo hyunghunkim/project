@@ -40,9 +40,10 @@
 		</footer>
 		<script type="text/javascript">
 			function loginbutton() {
-				if (document.getElementById("id").value == "kim"
+				var id = document.getElementById("id").value
+				if (id == "kim"
 						&& document.getElementById("password").value == "1234") {
-					location.href = "http://localhost:8080/Web/project-a/index.html?where=nexearch&id="+document.getElementById("id").value;
+					location.href = "http://localhost:8080/pro/hyungjun/project-a/index.html?where=nexearch&id="+id;
 				
 				}else{
 					alert("아이디 비밀번호가 틀렸습니다.");
