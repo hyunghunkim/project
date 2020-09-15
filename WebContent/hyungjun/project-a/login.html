@@ -14,7 +14,7 @@
 	
 				<h3>SpringWorld</h3>
 	
-				<form action="#" method="post">
+				<form action="login.jsp" method="post">
 	
 					<div class="field half first">
 						<label for="id">Id</label> <input name="id" id="id" type="text"
@@ -39,7 +39,7 @@
 			
 		</footer>
 		<script type="text/javascript">
-			function loginbutton() {
+			/* function loginbutton() {   //파라미터를 이용한 로그인 방식
 				var id = document.getElementById("id").value
 				if (id == "kim"
 						&& document.getElementById("password").value == "1234") {
@@ -48,7 +48,29 @@
 				}else{
 					alert("아이디 비밀번호가 틀렸습니다.");
 				}
+			} */
+			function loginbutton() {
+				var id = document.getElementById("id").value
+				if (id == "kim"
+						&& document.getElementById("password").value == "1234"){
+					location.href = "http://localhost:8080/pro/hyungjun/project-a/index.html"
+					setCookie('id',id);
+				}else{
+					alert("아이디 비빌번호가 틀렸습니다.")
+				}
 			}
+			
+			function setCookie(cName,cValue) {
+				var date = new Date();
+				date.setDate(date.getDate()+7);
+				
+				var cookies = '';
+				cookies += cName+'='+escape(cValue)+';path=/';
+				cookies += ';expires=' + date.toGMTString() + ';';
+				document.cookie = cookies;
+			}
+			
+			
 			
 		</script>
 		

@@ -1,0 +1,11 @@
+[
+	{	
+		"id":"kosta202",
+		"password":"1234",
+		"name":"김형준",
+		"nickname":"마리아왕자",
+		"email":"khj@namver.com",
+		"tel":"01088695106",
+		"mys":"나는!"
+	}
+]
